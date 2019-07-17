@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 
-const FormInput = ({ handleChange, label, name, ...otherProps }) => (
+const FormInput = ({ handleChange, label, ...otherProps }) => (
   <div className="group">
     <input className="form-input" onChange={handleChange} {...otherProps} />
     {label ? (
@@ -9,7 +9,6 @@ const FormInput = ({ handleChange, label, name, ...otherProps }) => (
         className={`${
           otherProps.value.length ? "shrink" : ""
         } form-input-label`}
-        htmlFor={name}
       >
         {label}
       </label>
