@@ -22,12 +22,14 @@ class App extends Component {
 
         userRef.onSnapshot(snapShot => {
           this.setState({
-            currentUser: snapShot.id,
+            currentUser: {
+              id: snapShot.id,
             ...snapShot.data()
-          })
-        });
+            }
+          });
 
-        console.log(this.state);
+          console.log(this.state);
+        });
       }
       this.setState({ currentUser: userAuth });
     })
