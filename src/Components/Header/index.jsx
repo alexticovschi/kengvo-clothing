@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { auth } from "../../firebase/utils";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
-import CartIcon  from "../CartIcon";
+import CartIcon from "../CartIcon";
+import CardDropdown from "../CartDropdown";
 import "./styles.scss";
 
 const Header = () => {
@@ -29,13 +30,14 @@ const Header = () => {
             SIGN IN
           </Link>
         )}
-        <CartIcon/>
+        <CartIcon />
       </div>
+      <CardDropdown/>
     </div>
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   currentUser: state.user.currentUser
 });
 
