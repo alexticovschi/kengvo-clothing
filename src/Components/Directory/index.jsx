@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect"
+import { createStructuredSelector } from "reselect";
 
 import { selectDirectorySections } from "../../redux/directory/directory-selectors"
 
